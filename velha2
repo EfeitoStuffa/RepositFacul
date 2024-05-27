@@ -1,0 +1,72 @@
+#Corrigir a VERTICAL
+
+
+velha = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+    ]
+
+game_over = False
+n_jogadas_x = 0
+n_jogadas_o = 0
+turnos = 0
+v_x = False
+v_o = False
+while game_over == False:
+    turnos = turnos + 1
+    print(f"Começo da rodada {turnos}")
+    for i in range(3):
+        print(velha[i])
+    jogada_x = int(input("Digite sua jogada : "))
+    while n_jogadas_x < turnos:
+        for j in range(len(velha)):
+            for k in range(len(velha[i])):
+                if velha[j][k] == jogada_x:
+                    velha[j][k] = 'X'
+                    n_jogadas_x = n_jogadas_x + 1
+        if n_jogadas_x < turnos:
+            jogada_x = int(input("Digite uma posição válida : "))
+#    for i in range(3):
+#        print(velha[i])
+#    jogada_o = int(input("Digite sua jogada : "))
+#    while n_jogadas_o < turnos:
+#        for j in range(len(velha)):
+#            for k in range(len(velha[i])):
+#                if velha[j][k] == jogada_o:
+#                    velha[j][k] = 'O'
+#                    n_jogadas_o = n_jogadas_o + 1
+#        if n_jogadas_o < turnos:
+#            jogada_o = int(input("Digite uma posição válida : "))
+
+
+
+    #Testando Condições de Vitória
+    #cnt_vertical = 0
+    cnt_diagonal_1 = 0
+    cnt_diagonal_2 = 0
+    for l in range(len(velha)):
+        if velha[l] == ['X', 'X', 'X']:
+            game_over = True
+            v_x = True
+            print("Vitória horizontal")
+        if velha [l][l] == 'X':
+            cnt_diagonal_1 = cnt_diagonal_1 + 1
+            if cnt_diagonal_1 == 3:
+                game_over = True
+                v_x = True
+                print("Vitória diagonal primaria")
+        if velha[l][len(velha)-l-1] == 'X':
+            cnt_diagonal_2 = cnt_diagonal_2 + 1
+            if cnt_diagonal_2 == 3:
+                game_over = True
+                v_x = True
+                print("Vitória diagonal secundária")
+        cnt_vertical = 0
+        for m in range(len(velha)):
+            if velha[l][m] == 'X':
+                cnt_vertical = cnt_vertical + 1
+                if cnt_vertical == 3:
+                    game_over = True
+                    v_x = True
+                    print("Vitória vertical")

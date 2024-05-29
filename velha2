@@ -21,7 +21,7 @@ while game_over == False:
     jogada_x = int(input("Digite sua jogada : "))
     while n_jogadas_x < turnos:
         for j in range(len(velha)):
-            for k in range(len(velha[i])):
+            for k in range(len(velha[j])):
                 if velha[j][k] == jogada_x:
                     velha[j][k] = 'X'
                     n_jogadas_x = n_jogadas_x + 1
@@ -45,12 +45,13 @@ while game_over == False:
     #cnt_vertical = 0
     cnt_diagonal_1 = 0
     cnt_diagonal_2 = 0
+    cnt_vertical = [0,0,0]
     for l in range(len(velha)):
         if velha[l] == ['X', 'X', 'X']:
             game_over = True
             v_x = True
             print("Vitória horizontal")
-        if velha [l][l] == 'X':
+        if velha[l][l] == 'X':
             cnt_diagonal_1 = cnt_diagonal_1 + 1
             if cnt_diagonal_1 == 3:
                 game_over = True
@@ -62,11 +63,13 @@ while game_over == False:
                 game_over = True
                 v_x = True
                 print("Vitória diagonal secundária")
-        cnt_vertical = 0
+        #cnt_vertical = 0
+        #vertical = 0
         for m in range(len(velha)):
-            if velha[l][m] == 'X':
-                cnt_vertical = cnt_vertical + 1
-                if cnt_vertical == 3:
+            if velha[m][l] == 'X':
+                cnt_vertical[l] = cnt_vertical[l] + 1
+                if cnt_vertical[l] == 3:
                     game_over = True
                     v_x = True
                     print("Vitória vertical")
+            #vertical = vertical + 1

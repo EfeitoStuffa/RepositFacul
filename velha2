@@ -13,6 +13,7 @@ n_jogadas_o = 0
 turnos = 0
 v_x = False
 v_o = False
+jogador = ['X', 'O']
 while game_over == False:
     turnos = turnos + 1
     print(f"Começo da rodada {turnos}")
@@ -27,8 +28,8 @@ while game_over == False:
                     n_jogadas_x = n_jogadas_x + 1
         if n_jogadas_x < turnos:
             jogada_x = int(input("Digite uma posição válida : "))
-#    for i in range(3):
-#        print(velha[i])
+    for i in range(3):
+        print(velha[i])
 #    jogada_o = int(input("Digite sua jogada : "))
 #    while n_jogadas_o < turnos:
 #        for j in range(len(velha)):

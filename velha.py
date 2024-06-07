@@ -1,4 +1,5 @@
-#Corrigir a VERTICAL
+# Jogo da velha por Bernardo Aragão D. Ribeiro e Rafael Spatini
+
 def Verificar_vencedor(jogador,velha, game_over):
     for o in range (len(jogador)):
         cnt_diagonal_1 = 0

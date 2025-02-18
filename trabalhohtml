@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia BO</title>
+<head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+        font-style: initial;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        text-align: center;
+        padding: 20px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .nav {
+        display: flex;
+        gap: 15px;
+    }
+    .nav a {
+        color: white;
+        text-decoration: none;
+    }
+    .login {
+        background-color: orange;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+    }
+    .main-content {
+        margin-top: 20px;
+    }
+    .main-content h1 {
+        font-size: 36px;
+    }
+    .main-content p {
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .main-content .button {
+        background-color: orange;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+    .hairstyles {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 40px;
+    }
+    .hairstyles img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border: 2px solid transparent;
+    }
+    .hairstyles .highlighted {
+        border-color: orange;
+    }
+</style>
+<body>
+    <div class="header">
+        <div class="logo">BO</div>
+        <div class="nav">
+            <a href="#">Sobre nós</a>
+            <a href="#">Agenda</a>
+            <a href="#">Preço</a>
+            <a href="#">Equipe</a>
+            <a href="#">Contato</a>
+        </div>
+        <a href="#" class="login">LOGIN</a>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            <h1>Barbearia BO</h1>
+            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+            <button class="button">AGENDAR</button>
+        </div>
+        <div class="hairstyles">
+            <img src="hairstyle1.jpg" alt="Hairstyle 1">
+            <img src="hairstyle2.jpg" alt="Hairstyle 2" class="highlighted">
+            <img src="hairstyle3.jpg" alt="Hairstyle 3">
+        </div>
+    </div>
+</body>
+</html>
